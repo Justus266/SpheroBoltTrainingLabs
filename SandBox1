@@ -27,3 +27,4 @@ async function startProgram() {
 	await delay(2)  // bolt will wait for 2 seconds
 	await spin(180, 1) // Bolt will turn 180 degrees
 	stopRoll() //Bolt will stop moving
+}
