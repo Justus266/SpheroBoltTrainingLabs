@@ -5,20 +5,25 @@ async function startProgram() {
   await spin(90, 1)
   await roll(90, 50, 2)
   CODE ON 3/10 
- async function startProgram() {
-	setMainLed(getRandomColor())
-	await roll(360, 100, 2)
-	setMainLed({ r: 255, g: 0, b: 0})
-	await spin(90, 1)
-	await roll(90, 50, 2)
-	setMainLed({ r: 0, g: 0, b: 255 })
-	await roll(270, 100, 2)
-	await delay(2)
-	await roll(90, 80, 2)
-	setMainLed({ r: 125, g: 0, b:125  })
-	await roll(180, 125,1.75)
-	await delay(2)
-	setMainLed(getRandomColor())
-	await spin(180, 1)
-	stopRoll()
-}
+
+
+/* Programmer: Brady Carriveau and Justus Boesch 
+Date: 3.10.20
+Program: This is my first code in sphero bolt, The bolt will make a t like shape, I used sphero wiki to help me code.
+*/
+
+async function startProgram() {
+	setMainLed(getRandomColor())    //The bolt will set a random color 
+	await roll(360, 100, 2)         //Bolt will turn 360 degrees and will move in that direction at 100 speed for 2 seconds
+	setMainLed({ r: 255, g: 0, b: 0}) // color will be red 
+	await spin(90, 1)     // bolt will turn 90 degrees
+	await roll(90, 50, 2) // bolt will move forward at 50 speed for 2 seconds
+	setMainLed({ r: 0, g: 0, b: 255 }) // bolt color will be blue
+	await roll(270, 100, 3)    //Bolt turns 270 degrees and moves forward at 100 speed for 3 seconds
+	await delay(2) // bolt will wait for 2 seconds
+	await roll(90, 80, 2)   //Bolt will turn 90 degrees and go forward at 80 speed for 2 seconds
+	setMainLed({ r: 125, g: 0, b:125  })// bolt will turn half blue half red to make a pink color
+	await roll(180, 125,1.75)// wolt will turn 180 degrees and go forward at 125 speed for 1.75 seconds
+	await delay(2)  // bolt will wait for 2 seconds
+	await spin(180, 1) // Bolt will turn 180 degrees
+	stopRoll() //Bolt will stop moving
